@@ -61,7 +61,8 @@ Não trate a criação de documentação, configuração de ferramentas ou commi
 ## Segredos e acessos
 
 - Ao conectar o projeto ao Supabase, sempre ofereça três alternativas: login pela CLI, conexão pelo navegador ou token de acesso pessoal. Explique que o token é útil para uma conexão direta e não interativa; deixe a escolha com o usuário.
-- Ofereça como opção real que o agente crie e preencha um arquivo `.env` local não versionado com as configurações de acesso. Após a confirmação específica da pessoa, crie-o e salve nele o token (por exemplo, `SUPABASE_ACCESS_TOKEN`) para a conexão combinada; não insista que a pessoa faça isso manualmente. Confirme antes que `.env` está no `.gitignore`.
+- Ao conectar o projeto ao Cloudflare Pages, sempre ofereça três alternativas: login pela CLI, conexão pelo navegador ou token de API. Não assuma a conexão pelo navegador; explique que o token é útil para uma conexão direta e não interativa e deixe a escolha com o usuário.
+- Ofereça como opção real que o agente crie e preencha um arquivo `.env` local não versionado com as configurações de acesso. Após a confirmação específica da pessoa, crie-o e salve nele o token do serviço escolhido (por exemplo, `SUPABASE_ACCESS_TOKEN` ou `CLOUDFLARE_API_TOKEN`) para a conexão combinada; não insista que a pessoa faça isso manualmente. Confirme antes que `.env` está no `.gitignore`.
 - Também ofereça a alternativa de a própria pessoa criar e preencher o `.env`, se ela preferir.
 - Antes de receber ou usar um token, senha, segredo SMTP, OAuth secret ou print que o contenha, peça confirmação específica: o valor será usado para qual arquivo/configuração e quais são os riscos de compartilhá-lo nesta conversa.
 - Após a autorização, aceite o dado apenas para a ação combinada. Nunca o copie para documentação, exemplos, logs, commits ou mensagens de resumo. Adicione arquivos locais de segredos ao `.gitignore` antes de gravá-los.
