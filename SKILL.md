@@ -54,6 +54,7 @@ Não trate a criação de documentação, configuração de ferramentas ou commi
 ## Autenticação
 
 - Comece com e-mail e senha como padrão. Quando houver confirmação de e-mail, recuperação de senha ou magic link, use Resend como SMTP; não ofereça outro provedor salvo pedido explícito.
+- Ao configurar o Resend, sempre ofereça três caminhos: painel no navegador para criar a chave e verificar o domínio, CLI do Resend autenticada pela chave ou chave de API em configuração local. Explique que qualquer caminho exige uma chave de API para o SMTP do Supabase, onde ela será usada como senha.
 - Ofereça, quando útil, o login com Google como alternativa opcional. Só guie a configuração de Google Cloud, URL de retorno e credenciais OAuth depois que os dois ambientes e URLs estiverem definidos e o usuário tiver escolhido Google.
 - Ofereça a desativação da confirmação de e-mail somente como escolha consciente: explique que alguém poderá se cadastrar sem comprovar que controla aquele endereço e que recuperação de senha continua exigindo SMTP. Se não houver SMTP, desative ou oculte recuperação de senha.
 - Não proponha login por telefone, SMS, WhatsApp ou Telegram por padrão. Só os discuta se a pessoa pedir, explicando custos recorrentes, requisitos de provedor e proteção contra abuso.
@@ -62,7 +63,7 @@ Não trate a criação de documentação, configuração de ferramentas ou commi
 
 - Ao conectar o projeto ao Supabase, sempre ofereça três alternativas: login pela CLI, conexão pelo navegador ou token de acesso pessoal. Explique que o token é útil para uma conexão direta e não interativa; deixe a escolha com o usuário.
 - Ao conectar o projeto ao Cloudflare Pages, sempre ofereça três alternativas: login pela CLI, conexão pelo navegador ou token de API. Não assuma a conexão pelo navegador; explique que o token é útil para uma conexão direta e não interativa e deixe a escolha com o usuário.
-- Ofereça como opção real que o agente crie e preencha um arquivo `.env` local não versionado com as configurações de acesso. Após a confirmação específica da pessoa, crie-o e salve nele o token do serviço escolhido (por exemplo, `SUPABASE_ACCESS_TOKEN` ou `CLOUDFLARE_API_TOKEN`) para a conexão combinada; não insista que a pessoa faça isso manualmente. Confirme antes que `.env` está no `.gitignore`.
+- Ofereça como opção real que o agente crie e preencha um arquivo `.env` local não versionado com as configurações de acesso. Após a confirmação específica da pessoa, crie-o e salve nele o token do serviço escolhido (por exemplo, `SUPABASE_ACCESS_TOKEN`, `CLOUDFLARE_API_TOKEN` ou `RESEND_API_KEY`) para a conexão combinada; não insista que a pessoa faça isso manualmente. Confirme antes que `.env` está no `.gitignore`.
 - Também ofereça a alternativa de a própria pessoa criar e preencher o `.env`, se ela preferir.
 - Antes de receber ou usar um token, senha, segredo SMTP, OAuth secret ou print que o contenha, peça confirmação específica: o valor será usado para qual arquivo/configuração e quais são os riscos de compartilhá-lo nesta conversa.
 - Após a autorização, aceite o dado apenas para a ação combinada. Nunca o copie para documentação, exemplos, logs, commits ou mensagens de resumo. Adicione arquivos locais de segredos ao `.gitignore` antes de gravá-los.
