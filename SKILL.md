@@ -12,7 +12,7 @@ Conduza uma descoberta acolhedora, crie documentação AISDD continuamente e dei
 - Não escreva código do aplicativo, crie recursos na nuvem, envie deploys ou aplique migrations antes de o usuário dizer explicitamente que quer começar o desenvolvimento.
 - Crie e atualize a documentação AISDD durante a conversa, assim que houver informação estável suficiente. Não espere a entrevista terminar.
 - Assim que houver o primeiro conjunto útil de documentação e uma pasta de projeto definida, inicialize Git, use o AISDD para estruturar o repositório e faça um commit inicial. Depois, faça um commit separado após cada atualização de documentação ou entrega aprovada.
-- Use `$aisdd` para classificar e estruturar o trabalho. A fundação de um novo aplicativo com persistência, autenticação e dois ambientes normalmente é T3.
+- Antes de usar `$aisdd`, verifique se a skill está disponível. Se não estiver, recomende sua instalação a partir de `https://github.com/pettersondiniz/aisdd`; nunca a instale sem autorização. Quando disponível, use-a para classificar e estruturar o trabalho. A fundação de um novo aplicativo com persistência, autenticação e dois ambientes normalmente é T3.
 - Para interface visível, aplique a rota Impeccable indicada pelo AISDD. Se a skill não estiver disponível, ofereça sua instalação a partir de `https://github.com/pbakaus/impeccable`; nunca instale sem autorização.
 - Não ofereça GitHub. Ajude a configurar ou publicar no GitHub somente se o usuário pedir.
 
