@@ -1,0 +1,4 @@
+interface:
+  display_name: "Planejar App Supabase"
+  short_description: "Entrevista e prepara apps Supabase"
+  default_prompt: "Use $planejar-app-supabase para planejar meu novo aplicativo."
