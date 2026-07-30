@@ -6,7 +6,7 @@ Mantenha sempre dois projetos Supabase e dois projetos Cloudflare Pages: homolog
 
 - Homologação usa usuários, dados, arquivos, URLs e credenciais de teste.
 - Produção usa dados e credenciais reais.
-- Aplique migrations primeiro em homologação. Não altere migration já aplicada; corrija com nova migration.
+- Em cada entrega, aplique todas as migrations pendentes primeiro em homologação e publique a versão correspondente do front-end no Cloudflare Pages de homologação. Não altere migration já aplicada; corrija com nova migration.
 - Mantenha comandos ou scripts que validem o projeto de destino antes de aplicar migration ou publicar.
 - Publicações devem ser explícitas para o projeto correto. A publicação de homologação não pode substituir produção.
 
