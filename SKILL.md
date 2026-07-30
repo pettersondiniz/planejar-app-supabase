@@ -56,6 +56,8 @@ Não trate a criação de documentação, configuração de ferramentas ou commi
 
 ## Segredos e acessos
 
+- Ao conectar o projeto ao Supabase, sempre ofereça três alternativas: login pela CLI, conexão pelo navegador ou token de acesso pessoal. Explique que o token é útil para uma conexão direta e não interativa; deixe a escolha com o usuário.
+- Se a pessoa escolher token, peça confirmação específica antes de recebê-lo, use-o somente para a conexão combinada e guarde-o apenas em configuração local ignorada pelo Git (por exemplo, `SUPABASE_ACCESS_TOKEN`). Nunca o mostre, registre ou envie ao repositório.
 - Primeiro, instrua o usuário a criar arquivos e configurar acessos pessoalmente. Diga que você pode preparar os arquivos e orientar a tela, caso ele autorize.
 - Antes de receber ou usar um token, senha, segredo SMTP, OAuth secret ou print que o contenha, peça confirmação específica: o valor será usado para qual arquivo/configuração e quais são os riscos de compartilhá-lo nesta conversa.
 - Após a autorização, aceite o dado apenas para a ação combinada. Nunca o copie para documentação, exemplos, logs, commits ou mensagens de resumo. Adicione arquivos locais de segredos ao `.gitignore` antes de gravá-los.
