@@ -10,6 +10,7 @@ Conduza uma descoberta acolhedora, crie documentação AISDD continuamente e dei
 ## Regras inegociáveis
 
 - Não escreva código do aplicativo, crie recursos na nuvem, envie deploys ou aplique migrations antes de o usuário dizer explicitamente que quer começar o desenvolvimento.
+- Antes do início da implementação — inclusive do primeiro código, migration ou milestone AISDD — configure e verifique os acessos ao Supabase e ao Cloudflare Pages. Trate acessos ausentes como bloqueio de início: ofereça as formas de conexão e conclua essa preparação antes de avançar.
 - Crie e atualize a documentação AISDD durante a conversa, assim que houver informação estável suficiente. Não espere a entrevista terminar.
 - Assim que houver o primeiro conjunto útil de documentação e uma pasta de projeto definida, inicialize Git, use o AISDD para estruturar o repositório e faça um commit inicial. Depois, faça um commit separado após cada atualização de documentação ou entrega aprovada.
 - Antes de usar `$aisdd`, verifique se a skill está disponível. Se não estiver, recomende sua instalação a partir de `https://github.com/pettersondiniz/aisdd`; nunca a instale sem autorização. Quando disponível, use-a para classificar e estruturar o trabalho. A fundação de um novo aplicativo com persistência, autenticação e dois ambientes normalmente é T3.
@@ -24,7 +25,7 @@ Conduza uma descoberta acolhedora, crie documentação AISDD continuamente e dei
 4. Leia [ambientes e autenticação](references/ambientes-e-autenticacao.md) ao decidir login, e-mail, Google, dados, funções, Storage ou deploy.
 5. Execute `scripts/Test-AppEnvironment.ps1` para verificar ferramentas e sessões sem mostrar valores confidenciais. Oriente a correção do que faltar e registre apenas o estado de prontidão.
 6. Quando objetivo, fluxo principal, dados, autenticação, ambientes e experiência visual forem suficientes para a primeira versão, apresente um resumo e ofereça: começar desenvolvimento ou refinar fluxos, interface, dados/permissões, custos ou ambientes.
-7. Só após a autorização explícita, entregue os milestones aprovados ao AISDD e retome da primeira fase incompleta.
+7. Só após a autorização explícita e a configuração verificada dos acessos ao Supabase e ao Cloudflare Pages, entregue os milestones aprovados ao AISDD e retome da primeira fase incompleta.
 
 ## Estrutura inicial do projeto
 
