@@ -11,6 +11,7 @@ Conduza uma descoberta acolhedora, crie documentação AISDD continuamente e dei
 
 - Não escreva código do aplicativo, crie recursos na nuvem, envie deploys ou aplique migrations antes de o usuário dizer explicitamente que quer começar o desenvolvimento.
 - Antes do início da implementação — inclusive do primeiro código, migration ou milestone AISDD — configure e verifique os acessos ao Supabase e ao Cloudflare Pages. Trate acessos ausentes como bloqueio de início: ofereça as formas de conexão e conclua essa preparação antes de avançar.
+- Em qualquer aplicativo com interface visível, instale, configure e use efetivamente o shadcn/ui. Não substitua essa exigência por componentes feitos manualmente ou por outra biblioteca; considere a falta de `components.json` e de componentes shadcn usados nas telas como bloqueio da implementação visual.
 - Durante a implementação, para cada entrega aprovada, aplique todas as migrations pendentes no Supabase de homologação e publique a versão correspondente do front-end no Cloudflare Pages de homologação. Faça isso antes de considerar a entrega pronta ou de avançar para produção.
 - Crie e atualize a documentação AISDD durante a conversa, assim que houver informação estável suficiente. Não espere a entrevista terminar.
 - Assim que houver o primeiro conjunto útil de documentação e uma pasta de projeto definida, inicialize Git, use o AISDD para estruturar o repositório e faça um commit inicial. Depois, faça um commit separado após cada atualização de documentação ou entrega aprovada.
@@ -27,7 +28,7 @@ Conduza uma descoberta acolhedora, crie documentação AISDD continuamente e dei
 5. Execute `scripts/Test-AppEnvironment.ps1` para verificar ferramentas e sessões sem mostrar valores confidenciais. Oriente a correção do que faltar e registre apenas o estado de prontidão.
 6. Para qualquer aplicativo com interface visível, antes de iniciar a implementação visual, direcione a pessoa para `https://ui.shadcn.com/create` e peça o link ou código gerado com o estilo escolhido. Registre essa escolha; não escolha o preset nem comece a construir a interface antes dela.
 7. Quando objetivo, fluxo principal, dados, autenticação, ambientes e experiência visual forem suficientes para a primeira versão, apresente um resumo e ofereça: começar desenvolvimento ou refinar fluxos, interface, dados/permissões, custos ou ambientes.
-8. Só após a autorização explícita, a configuração verificada dos acessos ao Supabase e ao Cloudflare Pages e a escolha do estilo shadcn, entregue os milestones aprovados ao AISDD e retome da primeira fase incompleta.
+8. Só após a autorização explícita, a configuração verificada dos acessos ao Supabase e ao Cloudflare Pages, a escolha do estilo shadcn e a instalação/configuração do shadcn/ui, entregue os milestones aprovados ao AISDD e retome da primeira fase incompleta.
 
 ## Estrutura inicial do projeto
 
@@ -43,7 +44,7 @@ Não trate a criação de documentação, configuração de ferramentas ou commi
 
 ## Padrões técnicos
 
-- Use React, Vite e TypeScript para a SPA; use shadcn/ui e mantenha a aplicação instalável como PWA.
+- Use React, Vite e TypeScript para a SPA; instale e configure o shadcn/ui no projeto e use seus componentes reais nas telas. Verifique `components.json` e os componentes adicionados antes de considerar a interface implementada; mantenha a aplicação instalável como PWA.
 - Pergunte sempre qual será o tema inicial: claro, escuro ou o do sistema. Quando houver preferência salva por usuário, ela prevalece sobre o padrão.
 - Para qualquer aplicativo com interface visível, direcione obrigatoriamente a pessoa para `https://ui.shadcn.com/create` antes de construir a interface e peça o link ou código gerado. Não selecione um estilo em nome dela nem prossiga com a implementação visual sem essa escolha. Considere o preset Sera/Zinc/Sky, Noto Sans/DM Sans, HugeIcons e raio None apenas um ponto de partida.
 - Use Supabase para banco, Auth e Storage. Escolha Edge Functions para lógica próxima a dados/autorização Supabase; escolha Cloudflare Workers para lógica de borda, APIs públicas ou integração que se beneficie do ecossistema Cloudflare. Registre a justificativa em ADR quando a escolha for durável.
