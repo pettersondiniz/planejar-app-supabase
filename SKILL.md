@@ -25,8 +25,9 @@ Conduza uma descoberta acolhedora, crie documentação AISDD continuamente e dei
 3. Faça perguntas em pequenas etapas. Não exija que a pessoa conheça tecnologia, modelo de dados ou termos de infraestrutura.
 4. Leia [ambientes e autenticação](references/ambientes-e-autenticacao.md) ao decidir login, e-mail, Google, dados, funções, Storage ou deploy.
 5. Execute `scripts/Test-AppEnvironment.ps1` para verificar ferramentas e sessões sem mostrar valores confidenciais. Oriente a correção do que faltar e registre apenas o estado de prontidão.
-6. Quando objetivo, fluxo principal, dados, autenticação, ambientes e experiência visual forem suficientes para a primeira versão, apresente um resumo e ofereça: começar desenvolvimento ou refinar fluxos, interface, dados/permissões, custos ou ambientes.
-7. Só após a autorização explícita e a configuração verificada dos acessos ao Supabase e ao Cloudflare Pages, entregue os milestones aprovados ao AISDD e retome da primeira fase incompleta.
+6. Para qualquer aplicativo com interface visível, antes de iniciar a implementação visual, direcione a pessoa para `https://ui.shadcn.com/create` e peça o link ou código gerado com o estilo escolhido. Registre essa escolha; não escolha o preset nem comece a construir a interface antes dela.
+7. Quando objetivo, fluxo principal, dados, autenticação, ambientes e experiência visual forem suficientes para a primeira versão, apresente um resumo e ofereça: começar desenvolvimento ou refinar fluxos, interface, dados/permissões, custos ou ambientes.
+8. Só após a autorização explícita, a configuração verificada dos acessos ao Supabase e ao Cloudflare Pages e a escolha do estilo shadcn, entregue os milestones aprovados ao AISDD e retome da primeira fase incompleta.
 
 ## Estrutura inicial do projeto
 
@@ -44,7 +45,7 @@ Não trate a criação de documentação, configuração de ferramentas ou commi
 
 - Use React, Vite e TypeScript para a SPA; use shadcn/ui e mantenha a aplicação instalável como PWA.
 - Pergunte sempre qual será o tema inicial: claro, escuro ou o do sistema. Quando houver preferência salva por usuário, ela prevalece sobre o padrão.
-- Quando a pessoa escolher um estilo no shadcn, peça que acesse `https://ui.shadcn.com/create` e envie o link gerado ou o código. Considere o preset Sera/Zinc/Sky, Noto Sans/DM Sans, HugeIcons e raio None apenas um ponto de partida.
+- Para qualquer aplicativo com interface visível, direcione obrigatoriamente a pessoa para `https://ui.shadcn.com/create` antes de construir a interface e peça o link ou código gerado. Não selecione um estilo em nome dela nem prossiga com a implementação visual sem essa escolha. Considere o preset Sera/Zinc/Sky, Noto Sans/DM Sans, HugeIcons e raio None apenas um ponto de partida.
 - Use Supabase para banco, Auth e Storage. Escolha Edge Functions para lógica próxima a dados/autorização Supabase; escolha Cloudflare Workers para lógica de borda, APIs públicas ou integração que se beneficie do ecossistema Cloudflare. Registre a justificativa em ADR quando a escolha for durável.
 - Crie um projeto Supabase e um projeto Cloudflare Pages independentes para homologação e produção. Nunca compartilhe banco, usuários, arquivos ou segredos entre eles.
 - Prefira os limites gratuitos e sinalize explicitamente qualquer requisito que possa exigir cobrança. Não ative planos pagos, domínios pagos, complementos ou cobranças sem autorização.
